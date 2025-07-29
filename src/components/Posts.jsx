@@ -15,6 +15,9 @@ export default function Posts({data, addLike}){
     const locationStl = `text-xs mt-0`
 
     const postImgStl = `shadow-lg shadow-neutral-800/30`
+    const imgtext = `absolute top-0 right-0 p-2 font-semibold text-orange-800 shadow-lg shadow-neutral-800/30
+                     bg-gradient-to-b from-orange-200 to-yellow-200 rounded-bl-lg hover:cursor-pointer 
+                     hover:transform hover:scale-105 active:scale-100`
 
     const infoStl = `p-3 flex flex-col gap-3`
     const iconsSecStl = `flex gap-4 mt-2`
@@ -33,7 +36,10 @@ export default function Posts({data, addLike}){
                     <p className={locationStl}>{data.location}</p>
                 </div>
             </section>
-            <img src={data.post} alt="portrait of the user" className={postImgStl}/>
+            <div className='relative'>
+              <img src={data.post} alt="portrait of the user" className={postImgStl}/>
+                <p className={imgtext}>Follow me</p>
+            </div>
             <section className={infoStl}>
                 <div className={iconsSecStl}>
                     <button onClick={addLike}>

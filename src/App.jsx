@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Posts from "./components/Posts"
+import { FaCommentDots} from "react-icons/fa";
 
 //images
 import logo from "./images/logo.png"
@@ -50,11 +51,13 @@ function App() {
   ])
   
   // tailwins styles
-  const container = `mx-auto max-w-[415px]`
+  const container = `mx-auto max-w-[415px] `
   const headerStl = `flex border-b border-neutral-500 p-3 bg-white`
   const mainStl = `bg-neutral-200 flex flex-col gap-6`
   const userAvatarStl = `h-12 w-12 rounded-full`
   const logoStl = `h-12 mr-auto `
+  const btnChat = `fixed bottom-2 right-2 p-3 rounded-full bg-orange-300 flex items-center justify-center
+                   hover:transform hover:scale-105 active:scale-95 hover:cursor-pointer`
   //
 
   function addLike(id, liked){
@@ -78,6 +81,9 @@ function App() {
       <main className={mainStl}>
          {postArrayEl}
       </main>
+      <div className={btnChat}>
+        <button><FaCommentDots className="h-6 w-6 text-white" /></button>
+      </div>
     </div>
   )
 }
