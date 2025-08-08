@@ -42,11 +42,11 @@ export default function Posts({data, addLike}){
             </div>
             <section className={infoStl}>
                 <div className={iconsSecStl}>
-                    <button onClick={addLike}>
+                    <button onClick={addLike} aria-label="manages likes">
                         {data.liked ? <FaHeart className={`${iconStl} ${liked}`}/> : <FaRegHeart className={iconStl}/>}
                     </button>
-                    <button ><FaRegComment className={iconStl}/></button>
-                    <button ><FaPaperPlane className={iconStl}/></button>
+                    <button aria-label="manage comments" ><FaRegComment className={iconStl}/></button>
+                    <button aria-label="fake button" ><FaPaperPlane className={iconStl}/></button>
                 </div>
                 <p className={likesStl}>{data.likes} likes</p>
                 <p className={msgStl}><span className={msgSpanStl}>{data.username}</span> {data.comment}</p>

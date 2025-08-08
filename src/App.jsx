@@ -82,7 +82,7 @@ function App() {
          {postArrayEl}
       </main>
       <div className={btnChat}>
-        <button><FaCommentDots className="h-6 w-6 text-white" /></button>
+        <button aria-label="start chat"><FaCommentDots className="h-6 w-6 text-white" /></button>
       </div>
     </div>
   )
